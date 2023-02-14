@@ -2,9 +2,12 @@
 
 ## How to start:
 
-import { DetectedObject, DocumentClient } from 'd8n-js'
+
 
 ```js
+
+import { DetectedObject, DocumentClient } from 'd8n-js'
+
 // Initialize client
 let client = new DocumentClient("YOUR-API-KEY");
 
