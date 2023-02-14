@@ -30,13 +30,18 @@ export class DocumentResponse {
 
 
 export class DocumentClient {
+    api_key: string;
+
+    constructor(api_key: string) {
+        this.api_key = api_key;
+    }
 
     public async GetCompleted(id: string) {
         var config = {
             method: 'get',
-            url: 'https://d8n.host/api/completed?id='+id,
+            url: 'https://d8n.host/api/completed?id=' + id,
             headers: {
-                'API-KEY': 'YOUR-API-KEY'
+                'API-KEY': this.api_key
             }
         };
 
@@ -74,7 +79,7 @@ export class DocumentClient {
             method: 'post',
             url: 'https://d8n.host/api/analysis',
             headers: {
-                'API-Key': 'YOUR-API-KEY',
+                'API-Key': this.api_key,
                 ...data.getHeaders()
             },
             data: data
@@ -99,7 +104,7 @@ export class DocumentClient {
             method: 'get',
             url: 'https://d8n.host/api/get_status?id=' + id,
             headers: {
-                'API-KEY': 'YOUR-API-KEY',
+                'API-KEY': this.api_key,
                 ...data.getHeaders()
             },
             data: data
