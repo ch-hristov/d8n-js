@@ -2,7 +2,8 @@
 
 ## How to start:
 
-
+Install package: 
+```npm i d8n-nodejs```
 
 ```js
 
