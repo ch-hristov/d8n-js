@@ -1,6 +1,6 @@
-import { DetectedObject, DocumentClient } from '../index'
+import { DetectedObject, DocumentClient } from '../src/index'
 
-var client = new DocumentClient("YOUR-API-KEY");
+let client = new DocumentClient("YOUR-API-KEY");
 
 test('Should upload image', async () => {
     let output = await client.Analysis('./test.jpg');

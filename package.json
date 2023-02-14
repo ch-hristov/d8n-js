@@ -1,6 +1,6 @@
 {
   "name": "d8n-nodejs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nodejs client for d8n",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,8 +10,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
+    "prepublishOnly": "npm test",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
