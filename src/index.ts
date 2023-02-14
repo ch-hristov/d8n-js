@@ -57,7 +57,7 @@ export class DocumentClient {
                     y2: element['y2'],
                     segment: element['segment'],
                     type: element['type'],
-                    id: '',
+                    id: element['prediction_id'],
                     confidence: element['confidence'],
                     text: element['text']
                 }
